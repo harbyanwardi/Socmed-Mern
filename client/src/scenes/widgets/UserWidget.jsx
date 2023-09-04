@@ -128,9 +128,20 @@ const UserWidget = ({ userId, picturePath }) => {
               <Typography color={medium}>Social Network</Typography>
             </Box>
           </FlexBetween>
-          <EditOutlined sx={{ color: main }} />
+          {/* <EditOutlined sx={{ color: main }} /> */}
         </FlexBetween>
-
+        <FlexBetween gap="1rem" mb="0.5rem">
+          <FlexBetween gap="1rem">
+            <img src="../assets/tiktok.png" alt="tiktok" />
+            <Box>
+              <Typography color={main} fontWeight="500">
+                Tiktok
+              </Typography>
+              <Typography color={medium}>Social Platform</Typography>
+            </Box>
+          </FlexBetween>
+          {/* <EditOutlined sx={{ color: main }} /> */}
+        </FlexBetween>
         <FlexBetween gap="1rem">
           <FlexBetween gap="1rem">
             <img src="../assets/linkedin.png" alt="linkedin" />
@@ -138,11 +149,12 @@ const UserWidget = ({ userId, picturePath }) => {
               <Typography color={main} fontWeight="500">
                 Linkedin
               </Typography>
-              <Typography color={medium}>Network Platform</Typography>
+              <Typography color={medium}>Professional Platform</Typography>
             </Box>
           </FlexBetween>
-          <EditOutlined sx={{ color: main }} />
+          {/* <EditOutlined sx={{ color: main }} /> */}
         </FlexBetween>
+        
       </Box>
     </WidgetWrapper>
   );
