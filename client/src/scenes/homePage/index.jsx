@@ -30,8 +30,6 @@ const Homepage = () => {
           <MyPostWidget userId={_id} picturePath={picturePath} />
         </Box>
 
-        
-
         {isNonMobileScreens && <Box flexBasis="26%"></Box>}
 
       </Box>
