@@ -6,7 +6,10 @@ import {
   useMediaQuery,
   Typography,
   useTheme,
+  Divider,
 } from "@mui/material";
+import GoogleIcon from '@mui/icons-material/Google';
+import FacebookIcon from '@mui/icons-material/Facebook';
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { Formik } from "formik";
 import * as yup from "yup";
@@ -45,6 +48,8 @@ const initialValuesLogin = {
   email: "",
   password: "",
 };
+
+
 
 const Form = () => {
   const [pageType, setPageType] = useState("login");
@@ -254,26 +259,87 @@ const Form = () => {
           </Box>
 
           {/* BUTTONS */}
-          <Box>
-            <Button
-              fullWidth
-              type="submit"
-              sx={{
-                m: "2rem 0",
-                p: "1rem",
-                backgroundColor: palette.primary.main,
-                color: palette.background.alt,
-                "&:hover": { color: palette.primary.main },
-              }}
-            >
-              {isLogin ? "LOGIN" : "REGISTER"}
-            </Button>
+          <Box mt="0.5rem">
+            {isLogin ?
+              <Box>
+                <Button
+                  fullWidth
+                  type="submit"
+                  sx={{
+                    m: "0.5rem 0",
+                    p: "1.05rem",
+                    borderRadius: "1.5rem",
+                    backgroundColor: "transparent",
+                    border: `2px solid ${palette.primary.main}`,
+                    color: palette.primary.main,
+                    "&:hover": { color: palette.primary.main },
+                  }}
+                >
+                  <Typography fontWeight="500" variant="h5">Login</Typography>
+                </Button>
+                <Divider sx={{m: "0.5rem"}}>Login With Others</Divider>
+                <Button
+                  fullWidth
+                  type="submit"
+                  sx={{
+                    m: "0.5rem 0",
+                    p: "1rem",
+                    borderRadius: "1.5rem",
+                    backgroundColor: palette.background.white,
+                    color: palette.background.alt,
+                    "&:hover": { color: palette.primary.main },
+                  }}
+                >
+                  <FlexBetween gap="0.25rem">
+                    <GoogleIcon />
+                    <Typography fontWeight="500" variant="h5">Continue With Google</Typography>
+                  </FlexBetween>
+
+
+                </Button>
+                <Button
+                  fullWidth
+                  type="submit"
+                  sx={{
+                    m: "0.5rem 0",
+                    p: "1rem",
+                    borderRadius: "1.5rem",
+                    backgroundColor: palette.primary.medium,
+                    color: palette.background.white,
+                    "&:hover": { color: palette.primary.main },
+                  }}
+                >
+                  <FlexBetween gap="0.25rem">
+                    <FacebookIcon />
+                    <Typography fontWeight="500" variant="h5">Continue With Facebook</Typography>
+                  </FlexBetween>
+                </Button>
+              </Box>
+
+              :
+              <Button
+                fullWidth
+                type="submit"
+                sx={{
+                  m: "0.5rem 0",
+                  p: "1rem",
+                  borderRadius: "1.5rem",
+                  backgroundColor: palette.primary.main,
+                  color: palette.background.alt,
+                  "&:hover": { color: palette.primary.main },
+                }}
+              >
+                <Typography fontWeight="500" variant="h5">Register</Typography>
+              </Button>
+            }
+            
             <Typography
               onClick={() => {
                 setPageType(isLogin ? "register" : "login");
                 resetForm();
               }}
               sx={{
+                mt: "1.5rem",
                 textDecoration: "underline",
                 color: palette.primary.main,
                 "&:hover": {

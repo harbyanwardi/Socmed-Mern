@@ -26,6 +26,7 @@ export const colorTokens = {
       700: "#006B7D",
       800: "#00353F",
       900: "#001519",
+      1000: "#1877F2",
     },
   };
   
@@ -41,6 +42,7 @@ export const colorTokens = {
                 dark: colorTokens.primary[200],
                 main: colorTokens.primary[500],
                 light: colorTokens.primary[800],
+                medium: colorTokens.primary[1000],
               },
               neutral: {
                 dark: colorTokens.grey[100],
@@ -52,6 +54,7 @@ export const colorTokens = {
               background: {
                 default: colorTokens.grey[900],
                 alt: colorTokens.grey[800],
+                white: colorTokens.grey[0],
               },
             }
           : {
@@ -71,12 +74,25 @@ export const colorTokens = {
               background: {
                 default: colorTokens.grey[10],
                 alt: colorTokens.grey[0],
+                black: colorTokens.grey[1000],
               },
             }),
       },
       typography: {
         fontFamily: ["Rubik", "sans-serif"].join(","),
         fontSize: 12,
+        titlefont: {
+          fontFamily: ["DM Serif Display", "sans-serif"].join(","),
+          fontSize: 130,
+        },
+        navfont: {
+          fontFamily: ["DM Serif Display", "sans-serif"].join(","),
+          fontSize: 40,
+        },
+        descfont: {
+          fontFamily: ["DM Serif Display", "sans-serif"].join(","),
+          fontSize: 12,
+        },
         h1: {
           fontFamily: ["Rubik", "sans-serif"].join(","),
           fontSize: 40,

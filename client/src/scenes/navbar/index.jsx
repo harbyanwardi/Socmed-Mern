@@ -45,7 +45,8 @@ const Navbar = () => {
     <FlexBetween padding="1rem 6%" backgroundColor={alt}>
       <FlexBetween gap="1.75rem">
         <Typography
-          fontWeight="bold"
+          fontWeight="500"
+          variant="navfont"
           fontSize="clamp(1rem, 2rem, 2.25rem)"
           color="primary"
           onClick={() => navigate("/home")}
@@ -56,7 +57,7 @@ const Navbar = () => {
             },
           }}
         >
-          Cikarang Society
+          Cikarang Society.
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween
