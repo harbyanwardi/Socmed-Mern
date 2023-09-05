@@ -11,6 +11,7 @@ import UserWidget from "scenes/widgets/UserWidget";
 const ProfilePage = () => {
   const [user, setUser] = useState(null);
   const { userId } = useParams();
+  const loggedInUserId = useSelector((state) => state.user._id);
   const token = useSelector((state) => state.token);
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
 
@@ -48,8 +49,10 @@ const ProfilePage = () => {
           flexBasis={isNonMobileScreens ? "42%" : undefined}
           mt={isNonMobileScreens ? undefined : "2rem"}
         >
-          <MyPostWidget userId={userId} picturePath={user.picturePath} />
-          <Box m="2rem 0" />
+          
+          <Box />
+          {loggedInUserId === userId ? <MyPostWidget userId={userId} picturePath={user.picturePath} />: '' }
+          
           <PostsWidget userId={userId} isProfile />
         </Box>
       </Box>
