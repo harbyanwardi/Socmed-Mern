@@ -7,7 +7,7 @@
 - Database Use MongoDB
 
 How to run :
-##Backend
+Backend
 -   Clone the repo
 -   Run `cd` to the newly created `/server` directory
 -   Run `npm install` command
@@ -16,7 +16,7 @@ How to run :
 -   Run `npm start` command
 -   Done
 
-##Frontend
+Frontend
 -   Clone the repo
 -   Run `cd` to the newly created `/client` directory
 -   Run `npm install` command
